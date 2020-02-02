@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html style="background-image: url(/images/Pictures_From_Dorian_Gray_6_t.jpg); 
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			">
+
+<head>
+	<title>Pete Ashton's Art | Pictures from Dorian Gray</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+	
+	<style>
+.vid {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.vid iframe,
+.vid object,
+.vid embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+</style>
+	
+</head>
+
+
+<body  style="background-color: rgb(36,41,67, 0.95);">
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="/" class="logo"><strong>Pete Ashton's Art</strong> <span></span></a>
+	<nav>
+		<a href="#menu">Menu</a>
+	</nav>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+	<ul class="links">
+        
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		        <li><a href="/">Home</a></li>
+	    	
+		
+		
+		    
+		        <li><a href="/artist-cv/">Artist CV</a></li>
+		    
+		
+		    
+		        <li><a href="/cv/">Art Practitioner CV</a></li>
+		    
+		
+		    
+		        <li><a href="/art-gantt/">Art Gantt</a></li>
+		    
+		
+		    
+		        <li><a href="/about/">About Pete Ashton</a></li>
+		    
+		
+		    
+		        <li><a href="/1972-index/">Home</a></li>
+		    
+		
+		    
+		        <li><a href="/decade/">Home</a></li>
+		    
+		
+		    
+		
+	</ul>
+
+</nav> 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>Pictures from Dorian Gray</h1>
+			<h3>Generating images from a novel using an AI system trained on a photographic archive.</h3>
+			<h4>February 2017  - online </h4>
+		</header>
+		<!--<span class="image main"><img src="///images/Pictures_From_Dorian_Gray_6_t.jpg" alt="" /></span>-->
+		<p><p><img src="/images/Pictures_From_Dorian_Gray_6.jpg" alt="" /></p>
+
+<p>I’ve been exploring the potential of the <a href="https://github.com/phillipi/pix2pix">pix2pix</a> system for generating photos from abstract representations of objects. A popular version of this currently buzzing around the internet is <a href="http://affinelayer.com/pixsrv/index.html">edges2cats</a>, because cats, and more interesting work is being done by <a href="http://mario-klingemann.tumblr.com">Mario Klingemann</a>.</p>
+
+<p>The basic principle is fairly simple. You create a pair of images. One is the original image and the other is an abstraction, usually an outline. You then train a neural network to try to generate the original from the abstraction. This is analogous to teaching a child to recognise dogs. You show it lots of pictures of different dogs labelled “dog” and eventually the child will correctly identify a dog even if it’s never seen that specific dog before.</p>
+
+<p><a href="https://github.com/phillipi/pix2pix"><img src="/images/pix2pixexamples.jpg" alt="" /></a></p>
+
+<p>Once you’ve trained the system, you can then give it abstractions and ask it to figure out the “original”. In theory it produces something that looks real, which is the goal of these systems. In practice it’s very easy to produce something that looks weird and interesting, which is why artists have latched on to this stuff.</p>
+
+<p>As well as the joy of producing weird images, I’m interested in exploring what’s actually happening in these systems by poking them with sticks. I was drawn to <a href="http://mario-klingemann.tumblr.com/post/157270869090/yhancik-mario-klingemann-trained-pix2pix-with">Mario’s use of blurred abstractions</a> to create an oil-paint effect and wondered what other sorts of abstractions could be used. Since some of my work has involved transforming between mediums (<a href="http://art.peteashton.com/live-sonification-photography/">image to sound</a>, etc) I thought I’d give <a href="https://en.wikipedia.org/wiki/ASCII_art">ASCII Art</a> a try.</p>
+
+<p>I used a collection of “classic photography” I’d found a while back as my training data and produced ASCII versions of each picture using the process included in Apple’s Automator app. Here’s an example.</p>
+
+<p><img src="/images/training-1-photo-0003.jpg" alt="" /></p>
+
+<p>The ASCII here is quite fine and uses all the possible characters, which wasn’t giving me the abstraction I needed, so I went with <a href="https://csl.name/jp2a/">jp2a</a> which gave me a lot more control. Specifically I could up the font size and chose which characters it used. By limiting it to lower-case a-z and select punctuation I was able to generate this:</p>
+
+<p><img src="/images/training-2-photo-0003.jpg" alt="" /></p>
+
+<p>Now the abstraction looks closer to real text, the sort you might get in a book that makes sense. This is what I was after.</p>
+
+<p>With the training underway I started to prepare my input for the final piece. I needed a body of text and settled on the Gutenberg edition of Oscar Wilde’s <a href="http://www.gutenberg.org/ebooks/4078">The Picture of Dorian Gray</a> because one should always go for the pun, but any text would do. I removed all paragraphs and extraneous spacing and exported it into squares which resembled the generated ASCII art. Here’s the first page.</p>
+
+<p><img src="/images/dorian_sq_01.jpg" alt="" /></p>
+
+<p>Once the training had finished processing overnight (it’s a long process, though my electricity usage plug says it only cost 24p for 12 hours, which isn’t bad) I asked it to generate photos from all 91 pages. Here’s that first page again.</p>
+
+<p><img src="/images/dorian_sq_01-after.jpg" alt="" /></p>
+
+<p>And here’s all the pages in a <a href="https://vimeo.com/205563393">video</a>:</p>
+
+<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/205563393" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<p>You can also <a href="/images/Pictures_From_Dorian_Gray.pdf">download it as a PDF</a> if you like.</p>
+
+</p>
+	</div>
+</section>
+
+</div>
+
+    <!-- Contact -->
+<section id="contact">
+	<div class="inner">
+		<section>
+			<section>
+				<div class="contact-method">
+					<span class="icon alt fa-home"></span>
+					<h3>Home</h3>
+					<span><a href="http://peteashton.com">peteashton.com</a></span>
+				</div>
+				<div class="contact-method">
+					<span class="icon alt fa-envelope"></span>
+					<h3>Email</h3>
+					<span><a href="mailto:pete@peteashton.com">pete@peteashton.com</a></span>
+				</div>
+			</section>
+			<section>
+				<div class="contact-method">
+					<span class="icon alt fa-phone"></span>
+					<h3>Phone</h3>
+					<span><a href="tel:+44 7775 690106">+44 7775 690106</a></span>
+				</div>
+			</section>
+		
+      
+  
+		</section>
+
+	</div>
+</section>
+
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			
+			<ul class="copyright">
+				<li>&copy; <a href="http://peteashton.com">Pete Ashton</a>, but don't let that stop you. </li>
+				<li>Website Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a> /  <a href="http://andrewbanchi.ch" target="_blank">Andrew Banchich</a></li>
+				
+			</ul>
+		</div>
+	</footer>
+
+</div>
+
+<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/skel.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
