@@ -3964,3 +3964,28 @@ img {max-width: 100%;}
 			opacity: 1;
 			visibility: visible;
 		}
+
+
+/* Next / Previous styles */
+
+.nextprev {width: 100%;
+}
+
+.previouspost {
+	width: 45%;
+
+}
+
+.nextpost {
+	width: 45%;
+	float: right;
+
+}
+.nextprevimg img{
+	object-fit: contain;
+}
+
+.post-categories {
+	font-style: italic;
+	font-size: smaller;
+}
