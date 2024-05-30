@@ -3989,3 +3989,9 @@ img {max-width: 100%;}
 	font-style: italic;
 	font-size: smaller;
 }
+
+iframe {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
