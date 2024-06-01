@@ -1682,6 +1682,11 @@
 		text-decoration: none;
 	}
 
+.postcontent a {
+	color: #bbe0e7 !important;
+
+}
+
 		a:hover {
 			border-bottom-color: transparent;
 			color: #9bf1ff !important;
@@ -1770,7 +1775,7 @@
 
 	blockquote {
 		border-left: solid 4px rgba(212, 212, 255, 0.1);
-		font-style: italic;
+		font-size: 0.9em;
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
